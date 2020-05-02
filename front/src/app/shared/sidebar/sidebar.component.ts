@@ -21,8 +21,8 @@ export class SidebarComponent implements OnInit {
   }
 
   private configPage() {
-    this.menu = this._sidebar.getMenu();
-    this.user = this._comm.getStorage(env.STORE.USER);
+  //  this.menu = this._sidebar.getMenu();
+  //  this.user = this._comm.getStorage(env.STORE.USER);
   }
 
 }

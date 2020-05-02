@@ -25,6 +25,9 @@ import { ErrorHandlingService } from './services/shared/error-handling.service';
     HttpClientModule,
     BrowserAnimationsModule,
   ],
+
+  exports: [
+  ],
   providers: [
     /* { provide: ErrorHandler, useClass: ErrorHandlingService } */
   ],
