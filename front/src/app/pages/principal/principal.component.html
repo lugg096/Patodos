@@ -1,0 +1,17 @@
+<div class="card">
+    <div class="card-body">
+        <button type="button" class="btn btn-primary">Primary</button>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-12 col-md-4 form-group">
+          <input type="text"
+                 class="form-control"
+                 #dp="bsDatepicker"
+                 bsDatepicker
+                 [bsValue]="bsValue">
+        </div>
+        <div class="col-xs-12 col-12 col-md-3 form-group">
+          <button class="btn btn-success" (click)="dp.toggle()" [attr.aria-expanded]="dp.isOpen" type="button">Date Picker</button>
+        </div>
+      </div>
+</div>

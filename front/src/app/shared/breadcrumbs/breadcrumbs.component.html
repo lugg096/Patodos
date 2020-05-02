@@ -1,0 +1,14 @@
+<ng-container *ngIf="showHeader">
+    <div class="row page-titles">
+        <div class="col-6">
+            <h3 class="text-themecolor"> {{ label }}</h3>
+        </div>
+        <div class="col-6 d-flex justify-content-end" *ngIf="redirect">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a [routerLink]="redirect">Volver</a>
+                </li>
+            </ol>
+        </div>
+    </div>
+</ng-container>
