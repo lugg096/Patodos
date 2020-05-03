@@ -13,19 +13,9 @@ export class PrincipalComponent implements OnInit {
   public listAyudas =[];
 
   ngOnInit() {
-    this.getAyudas(); 
+
   }
 
-  getAyudas() {
-    let valor1 = {
-      nombre: 'hola',
-      edad: 15
-    }
 
-    this._ayudas.getList(valor1).subscribe(res=>{
-      console.log(res);
-      this.listAyudas=res;
-    })
-  }
 
 }

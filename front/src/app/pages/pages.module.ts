@@ -9,12 +9,14 @@ import { PAGES_ROUTES } from './pages.routes';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PrincipalComponent } from './principal/principal.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { InvitacionesComponent } from './invitaciones/invitaciones.component';
 
 @NgModule({
     declarations: [
         PagesComponent,
         PrincipalComponent,
-        PerfilComponent
+        PerfilComponent,
+        InvitacionesComponent
     ],
     exports: [
         PrincipalComponent
