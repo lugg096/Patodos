@@ -26,7 +26,7 @@ export class PagesComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
 
-   /*  this._security.session()
+    this._security.session()
       .subscribe(res => {
         if (!res.expired) {
           let cur = Date.now() / 1000;
@@ -34,7 +34,7 @@ export class PagesComponent implements OnInit, OnDestroy {
 
           this.initTimeDown();
         }
-      }); */
+      });
   }
 
   private initTimeDown() {

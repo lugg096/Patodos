@@ -4,6 +4,7 @@ import { LoginGuard } from '../services/guards/login.guard';
 import { PagesComponent } from './pages.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { InvitacionesComponent } from './invitaciones/invitaciones.component';
 
 const pageRoutes: Routes = [
     {
@@ -12,6 +13,7 @@ const pageRoutes: Routes = [
         canActivate: [LoginGuard],
         children: [
             { path: 'ayudas', component: PrincipalComponent, data: { titulo: 'Ayudas' } },
+            { path: 'invitaciones', component: InvitacionesComponent, data: { titulo: 'Invitaciones' } },
             { path: 'perfil', component: PerfilComponent, data: { titulo: 'Perfil' } },
             { path: '', redirectTo: '/ayudas', pathMatch: 'full' },
         ]

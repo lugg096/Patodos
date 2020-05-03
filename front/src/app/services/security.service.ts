@@ -16,11 +16,13 @@ export class SecurityService {
     private router: Router) { }
 
   sign(user: any) {
-    let URL = env.URI.concat('security/login');
+
+    let URL = env.URI.concat('auth/token/');
     return this._http.post(URL, user).pipe(
       map((res: any) => {
-        localStorage.setItem(env.STORE.TOKEN, res.token);
-        localStorage.setItem(env.STORE.USER, JSON.stringify(res.user));
+        console.log('devuelve',res);
+        localStorage.setItem(env.STORE.TOKEN, res.tokenAccess);
+        localStorage.setItem(env.STORE.USER, JSON.stringify(res));
         return true;
       })
     );

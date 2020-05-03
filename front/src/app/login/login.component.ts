@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
 
     this.configForm();
-/*     this.getParametros(); */
+    /*     this.getParametros(); */
 
     if (this.route.snapshot.queryParamMap.get('expired') == 'true') {
       this.msg = env.MSG.EXPIRED_SESSION;
@@ -39,11 +39,12 @@ export class LoginComponent implements OnInit {
 
   public ingresar() {
     if (this.loginForm.invalid || this.loading) return;
-    //this.loading = false;
-        this.router.navigate(['/ayudas']);
 
- /*    this.msg = '';
+    this.msg = '';
     this.loading = true;
+    console.log(this.loginForm.value);
+
+
     this._security.sign(this.loginForm.value)
       .subscribe(_ => {
         this.loading = false;
@@ -51,7 +52,7 @@ export class LoginComponent implements OnInit {
       }, err => {
         this.loading = false;
         this.msg = err.error.msg || '';
-      }, () => this.loading = false); */
+      }, () => this.loading = false);
   }
 
   public isInvalid(key: string) {
@@ -68,12 +69,12 @@ export class LoginComponent implements OnInit {
     });
   }
 
-/*   private getParametros() {
-    this._parametro.getAll()
-      .subscribe(res => {
-        if (res) this.saveLocalStorage(res);
-      });
-  } */
+  /*   private getParametros() {
+      this._parametro.getAll()
+        .subscribe(res => {
+          if (res) this.saveLocalStorage(res);
+        });
+    } */
 
   private saveLocalStorage(parametros) {
     let grupos = [];
