@@ -10,13 +10,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PrincipalComponent } from './principal/principal.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { InvitacionesComponent } from './invitaciones/invitaciones.component';
+import { ForminvitacionComponent } from './forminvitacion/forminvitacion.component';
+import { FormayudaComponent } from './formayuda/formayuda.component';
 
 @NgModule({
     declarations: [
         PagesComponent,
         PrincipalComponent,
         PerfilComponent,
-        InvitacionesComponent
+        InvitacionesComponent,
+        ForminvitacionComponent,
+        FormayudaComponent
     ],
     exports: [
         PrincipalComponent

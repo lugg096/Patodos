@@ -33,6 +33,8 @@ export class BreadcrumbsComponent implements OnInit {
         }
 
         this.label = data.titulo;
+        console.log(this.label);
+        
         this.redirect = data.redirect;
         this.title.setTitle(this.label);
 
