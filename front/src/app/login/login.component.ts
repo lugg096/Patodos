@@ -40,14 +40,14 @@ export class LoginComponent implements OnInit {
   public ingresar() {
     if (this.loginForm.invalid || this.loading) return;
     //this.loading = false;
-        this.router.navigate(['/inicio']);
+        this.router.navigate(['/favores']);
 
  /*    this.msg = '';
     this.loading = true;
     this._security.sign(this.loginForm.value)
       .subscribe(_ => {
         this.loading = false;
-        this.router.navigate(['/inicio']);
+        this.router.navigate(['/favores']);
       }, err => {
         this.loading = false;
         this.msg = err.error.msg || '';
