@@ -11,9 +11,9 @@ const pageRoutes: Routes = [
         component: PagesComponent,
         canActivate: [LoginGuard],
         children: [
-            { path: 'favores', component: PrincipalComponent, data: { titulo: 'Favores' } },
+            { path: 'ayudas', component: PrincipalComponent, data: { titulo: 'Ayudas' } },
             { path: 'perfil', component: PerfilComponent, data: { titulo: 'Perfil' } },
-            { path: '', redirectTo: '/favores', pathMatch: 'full' },
+            { path: '', redirectTo: '/ayudas', pathMatch: 'full' },
         ]
     }
 ];

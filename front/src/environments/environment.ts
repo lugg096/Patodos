@@ -1,6 +1,6 @@
 export const environment = {
   production: false,
-  URI: 'http://localhost:3600/',
+  URI: 'http://18.231.172.141/api/',
   MSG: {
     INF_DELETE: 'Esta seguro que desea eliminar el registro?',
     INF_DUPLIC: 'El registro seleccioando ya fue agregado.',

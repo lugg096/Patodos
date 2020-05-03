@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AyudasService } from 'src/app/services/ayudas.service';
 
 @Component({
   selector: 'app-principal',
@@ -7,14 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrincipalComponent implements OnInit {
 
-  bsValue = new Date();
-  bsRangeValue: Date[];
-  maxDate = new Date();
-  constructor() {
-    this.maxDate.setDate(this.maxDate.getDate() + 7);
-    this.bsRangeValue = [this.bsValue, this.maxDate];
+  constructor(private _ayudas: AyudasService) {
   }
+  public listAyudas =[];
+
   ngOnInit() {
+    this.getAyudas(); 
+  }
+
+  getAyudas() {
+    let valor1 = {
+      nombre: 'hola',
+      edad: 15
+    }
+
+    this._ayudas.getList(valor1).subscribe(res=>{
+      console.log(res);
+      this.listAyudas=res;
+    })
   }
 
 }
