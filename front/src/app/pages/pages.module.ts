@@ -12,9 +12,11 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { InvitacionesComponent } from './invitaciones/invitaciones.component';
 import { ForminvitacionComponent } from './forminvitacion/forminvitacion.component';
 import { FormayudaComponent } from './formayuda/formayuda.component';
+import { JwPaginationComponent } from 'jw-angular-pagination';
 
 @NgModule({
     declarations: [
+        JwPaginationComponent,
         PagesComponent,
         PrincipalComponent,
         PerfilComponent,
