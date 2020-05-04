@@ -1,16 +1,16 @@
-<div class="login-page">
-    <div class="form">
-
-        <form [formGroup]="loginForm" class="login-form" (ngSubmit)="ingresar()">
-
-            <div class="form-group m-t-40">
-                <div class="col-12">
+<div class="login-page"> <div class="col-12">
                     <input type="text" formControlName="username" class="form-control" placeholder="Nombre de usuario"
                         [class.is-invalid]="isInvalid('username')">
                     <div class="invalid-feedback">
                         <i class="fa fa-times-circle-o"></i> Este campo es <strong>requerido.</strong>
                     </div>
                 </div>
+    <div class="form">
+
+        <form [formGroup]="loginForm" class="login-form" (ngSubmit)="ingresar()">
+
+            <div class="form-group m-t-40">
+               
             </div>
             <div class="form-group">
                 <div class="col-12">

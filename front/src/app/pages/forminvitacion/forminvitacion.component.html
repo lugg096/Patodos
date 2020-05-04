@@ -1,38 +1,47 @@
-<form [formGroup]="forminvitacion.component" (ngSubmit)="onSubmit()">
+<form [formGroup]="form-invitacion" (ngSubmit)="onSubmit()">
+  <form #userForm="ngForm" (ngSubmit)="onFormSubmit(userForm)">
+    <h2>Crear Invitación</h2>
 
-  <table>
+    <table>
+      <tr>
+        <td>
+          <label>
+            Título de la ayuda:
+            <input type="text" rows="1" cols="60" formControlName="typeDesc" class="form-control"
+              placeholder="Escribe un título mensaje" [class.is-invalid]="isInvalid('typeDesc')">
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <td>
+
+          <label>
+            Especificación de la ayuda
+            <textarea rows="2" cols="40" formControlName="title" placeholder="Escribe tu mensaje aquí"
+            [class.is-invalid]="isInvalid('title')">
+              </textarea>
+          </label>
+
+        </td>
+
+
+      </tr>
+     <td>  
+      <label for="phone">Whatsapp</label>
+
+      <input name="whatsapp" [ngModel]="user.mobileNumber" [pattern]="mobNumberPattern" #mobNumber="ngModel">  
+    <div *ngIf="mobNumber.errors && userForm.submitted && !isValidFormSubmitted" [ngClass] = "'error'">  
+      <div *ngIf="mobNumber.errors.pattern">  
+        Número inválido
+      </div>   
+    </div>  
+  </td>  
+  
     <tr>
-      <td>
-        <label>
-          Título de la ayuda:
-          <textarea rows="1" cols="30" formControlName="typeDesc">
-            </textarea>
-        </label>
-      </td>
-    </tr>
-    <tr>
-      <td>
+        <td>
+          <button class="btn btn-info" type="submit" [disabled]="!profileForm.valid">  Submit</button>
+        </td>
 
-        <label>
-          Especificación de la ayuda
-          <textarea rows="2" cols="40" formControlName="title">
-                    </textarea>
-        </label>
-      </td>
-    </tr>
-
-    <label for="phone">Whatsapp</label>
-
-    <input type="tel" id="phone" formControlName"whatsapp" pattern="+[51]{2}[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-
-    <small> Formato: +51 456 789 065</small>
-    <tr>
-      
-      <td>
-        <button class="btn btn-info" type="submit" [disabled]="!profileForm.valid">Submit</button>
-
-        
-      </td>
-    </tr>
-  </table>
-</form>
+      </tr>
+    </table>
+  </form>
