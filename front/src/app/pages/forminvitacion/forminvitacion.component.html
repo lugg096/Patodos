@@ -1,1 +1,46 @@
-<p>forminvitacion works!</p>
+<form [formGroup]="form-invitacion" (ngSubmit)="onSubmit()">
+  <form #userForm="ngForm" (ngSubmit)="onFormSubmit(userForm)">
+    <h2>Crear Invitación</h2>
+
+    <table>
+      <tr>
+        <td>
+          <label>
+            Título de la ayuda:
+            <input type="text" rows="1" cols="60" formControlName="typeDesc" class="form-control"
+              placeholder="Escribe un título mensaje" [class.is-invalid]="isInvalid('typeDesc')">
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <td>
+
+          <label>
+            Especificación de la ayuda
+            <textarea rows="2" cols="40" formControlName="title" placeholder="Escribe tu mensaje aquí"
+              [class.is-invalid]="isInvalid('title')">
+              </textarea>
+          </label>
+
+        </td>
+
+
+      </tr>
+      <td>
+        <label for="phone">Whatsapp</label>
+
+        <input name="whatsapp" [ngModel]="user.mobileNumber" [pattern]="mobNumberPattern" #mobNumber="ngModel">
+        <div *ngIf="mobNumber.errors && userForm.submitted && !isValidFormSubmitted" [ngClass]="'error'">
+          <div *ngIf="mobNumber.errors.pattern">
+            Número inválido
+          </div>
+        </div>
+      </td>
+
+      <tr>
+        <td>
+          <button class="btn btn-info" type="submit" [disabled]="!profileForm.valid"> Submit</button>
+        </td>
+
+      </tr>
+    </table>
