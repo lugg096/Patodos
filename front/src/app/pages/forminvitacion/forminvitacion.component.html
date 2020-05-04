@@ -1,1 +1,38 @@
-<p>forminvitacion works!</p>
+<form [formGroup]="forminvitacion.component" (ngSubmit)="onSubmit()">
+
+  <table>
+    <tr>
+      <td>
+        <label>
+          Título de la ayuda:
+          <textarea rows="1" cols="30" formControlName="typeDesc">
+            </textarea>
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <td>
+
+        <label>
+          Especificación de la ayuda
+          <textarea rows="2" cols="40" formControlName="title">
+                    </textarea>
+        </label>
+      </td>
+    </tr>
+
+    <label for="phone">Whatsapp</label>
+
+    <input type="tel" id="phone" formControlName"whatsapp" pattern="+[51]{2}[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+
+    <small> Formato: +51 456 789 065</small>
+    <tr>
+      
+      <td>
+        <button class="btn btn-info" type="submit" [disabled]="!profileForm.valid">Submit</button>
+
+        
+      </td>
+    </tr>
+  </table>
+</form>
