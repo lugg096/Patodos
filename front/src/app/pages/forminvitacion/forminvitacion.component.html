@@ -18,7 +18,7 @@
           <label>
             Especificación de la ayuda
             <textarea rows="2" cols="40" formControlName="title" placeholder="Escribe tu mensaje aquí"
-            [class.is-invalid]="isInvalid('title')">
+              [class.is-invalid]="isInvalid('title')">
               </textarea>
           </label>
 
@@ -26,22 +26,21 @@
 
 
       </tr>
-     <td>  
-      <label for="phone">Whatsapp</label>
+      <td>
+        <label for="phone">Whatsapp</label>
 
-      <input name="whatsapp" [ngModel]="user.mobileNumber" [pattern]="mobNumberPattern" #mobNumber="ngModel">  
-    <div *ngIf="mobNumber.errors && userForm.submitted && !isValidFormSubmitted" [ngClass] = "'error'">  
-      <div *ngIf="mobNumber.errors.pattern">  
-        Número inválido
-      </div>   
-    </div>  
-  </td>  
-  
-    <tr>
+        <input name="whatsapp" [ngModel]="user.mobileNumber" [pattern]="mobNumberPattern" #mobNumber="ngModel">
+        <div *ngIf="mobNumber.errors && userForm.submitted && !isValidFormSubmitted" [ngClass]="'error'">
+          <div *ngIf="mobNumber.errors.pattern">
+            Número inválido
+          </div>
+        </div>
+      </td>
+
+      <tr>
         <td>
-          <button class="btn btn-info" type="submit" [disabled]="!profileForm.valid">  Submit</button>
+          <button class="btn btn-info" type="submit" [disabled]="!profileForm.valid"> Submit</button>
         </td>
 
       </tr>
     </table>
-  </form>
