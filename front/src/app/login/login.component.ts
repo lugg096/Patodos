@@ -31,7 +31,6 @@ export class LoginComponent implements OnInit {
 
     this.configForm();
     /*     this.getParametros(); */
-
     if (this.route.snapshot.queryParamMap.get('expired') == 'true') {
       this.msg = env.MSG.EXPIRED_SESSION;
     }

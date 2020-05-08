@@ -30,7 +30,7 @@ export class PrincipalComponent implements OnInit {
       console.log(res);
       this.cantSoli = res.data.filter(x => x.status == 'inp').length;
       this.cantAte = res.data.filter(x => x.status == 'att').length;
-      this.cantNoAte = res.data.filter(x => x.status == 'gra').length;
+      this.cantNoAte = res.data.filter(x => x.status == 'not').length;
       this.listAyudas = res.data.filter(x => x.status == this.estadoAyuda);
     })
   }
@@ -46,7 +46,7 @@ export class PrincipalComponent implements OnInit {
         break;
       case 'not': this.titulo = 'Notificadas'
         break;
-      case 'nn1': this.titulo = 'Atendiendose'
+      case 'acc': this.titulo = 'Atendiendose'
         break;
       case 'att': this.titulo = 'Atendidas'
         break;
@@ -88,14 +88,12 @@ export class PrincipalComponent implements OnInit {
       allowOutsideClick: () => !swal.isLoading()
     }).then((result) => {
       if (result.value) {
-        this.getlist();
-        swal.fire(
-          'Good job!',
-          'You clicked the button!',
-          'success'
-        )
+        
+        swal.fire('Genial!', 'Ayuda notificada', 'success')
       }
+      this.getlist();
     })
+
   }
 
   updateAyuda(state,id){

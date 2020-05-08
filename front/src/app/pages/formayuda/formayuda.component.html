@@ -1,1 +1,48 @@
-<p>formayuda works!</p>
+<div class="card">
+    <div class="card-body">
+        <div class="form-horizontal form-material " >
+            <form [formGroup]="ayudaForm">
+
+                <div class="form-group row">
+                    <label class="col-sm-12">Tipo de Ayuda:</label>
+                    <div class="col-sm-6">
+                        <select class="form-control form-control-line" formControlName="type">
+                            <option value="">-- Seleccione --</option>
+                            <option *ngFor="let t of tipoAyudaList" [value]="t.id">{{t.description}}</option>
+                        </select>
+                    </div>
+                </div>
+    
+                <div class="form-group row">
+                    <label class="col-md-12">Titulo:</label>
+                    <div class="col-md-12">
+                        <input type="text" class="form-control form-control-line" formControlName="title">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-md-12">Descripción:</label>
+                    <div class="col-md-12">
+                        <textarea rows="2" class="form-control form-control-line" formControlName="description"></textarea>
+                    </div>
+                </div>
+            </form>
+            <div class="form-group row">
+                <label class="col-md-12">Puntos GPS:</label>
+                <div class="col-md-6 mt-1">
+                    <input type="text" placeholder="Latitud" class="form-control form-control-line" [(ngModel)]="latitude">
+                </div>
+                <div class="col-md-6 mt-1">
+                    <input type="text" placeholder="Longitud" class="form-control form-control-line" [(ngModel)]="longitude">
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <button class="btn btn-success" (click)="enviar()">Solicitar Ayuda</button>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+</div>

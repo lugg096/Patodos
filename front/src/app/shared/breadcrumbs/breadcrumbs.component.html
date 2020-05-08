@@ -3,21 +3,13 @@
         <div class="col-6">
             <h3 class="text-themecolor"> {{ label }}</h3>
         </div>
-        <!--  <div class="col-5 d-flex justify-content-end" *ngIf="redirect">
+         <div class="col-6 d-flex justify-content-end" *ngIf="redirect">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                     <a [routerLink]="redirect">Volver</a>
                 </li>
             </ol>
-        </div> -->
-        <div class="col-4"></div>
-        <div class="col-1">
-            <a *ngIf="label=='Invitaciones'" href="index.html" class="btn btn-success waves-effect waves-light" routerLink="/finvitacion"><i class="fa fa-plus"></i>
-                Crear Invitación</a>
-            <a *ngIf="label=='Ayudas'" href="index.html" class="btn btn-success waves-effect waves-light" routerLink="/fayuda"><i class="fa fa-plus"></i>
-                Solicitar Ayuda</a>
         </div>
-
     </div>
 
 </ng-container>
