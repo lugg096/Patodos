@@ -10,6 +10,136 @@ input[type=text], select, textarea {
   resize: vertical;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+#
+body {
+  background-color: lightblue;
+}
+
+@keyframes breath {
+  0% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 110%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+.holder {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  left: calc(50% - 150px);
+  bottom: calc(50% - 150px);
+
+  border-radius: 20px;
+
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+
+  transition: 0.9s linear;
+}
+.holder form {
+  display: flex;
+  flex-direction: column;
+
+  width: 300px;
+  height: 300px;
+
+  align-items: center;
+}
+
+.holder form a {
+  color: white;
+  font-size: 40px;
+}
+
+.holder form input {
+  padding: 5px;
+  border-radius: 5px;
+  margin: 10px;
+
+  border: none;
+
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+
+  font-size: 14px;
+
+  margin-top: 20px;
+
+  font-weight: bold;
+
+  background-color: rgb(18, 212, 161);
+  opacity: 0.4;
+}
+
+button:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.fadeOut {
+  animation: fadeOut linear 1s;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.greetings {
+  width: 600px;
+  height: 300px;
+
+  display: none;
+
+  align-content: center;
+  text-align: center;
+
+  color: white;
+  font-size: 26px;
+}
+
+.hello {
+  font-size: 46px;
+}
+
+.user {
+  font-size: 36px;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
 label {
   padding: 12px 12px 12px 0;
   display: inline-block;

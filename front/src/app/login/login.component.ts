@@ -13,6 +13,7 @@ import { ParametroService } from '../services/parametro.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent implements OnInit {
 
   public msg = '';
@@ -39,20 +40,19 @@ export class LoginComponent implements OnInit {
 
   public ingresar() {
     if (this.loginForm.invalid || this.loading) return;
+    //this.loading = false;
+    this.router.navigate(['/inicio']);
 
-    this.msg = '';
-    this.loading = true;
-    console.log(this.loginForm.value);
-
-
-    this._security.sign(this.loginForm.value)
-      .subscribe(_ => {
-        this.loading = false;
-        this.router.navigate(['/ayudas']);
-      }, err => {
-        this.loading = false;
-        this.msg = err.error.msg || '';
-      }, () => this.loading = false);
+    /*    this.msg = '';
+       this.loading = true;
+       this._security.sign(this.loginForm.value)
+         .subscribe(_ => {
+           this.loading = false;
+           this.router.navigate(['/inicio']);
+         }, err => {
+           this.loading = false;
+           this.msg = err.error.msg || '';
+         }, () => this.loading = false); */
   }
 
   public isInvalid(key: string) {

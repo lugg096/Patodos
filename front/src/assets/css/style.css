@@ -810,7 +810,7 @@ sidebar navigation
             color: #398bf7; }
         .sidebar-nav ul li a.active {
           font-weight: 500;
-          color: #263238; }
+          color: #9bf35c; }
       .sidebar-nav ul li ul {
         padding-left: 28px; }
         .sidebar-nav ul li ul li a {
@@ -821,11 +821,12 @@ sidebar navigation
         font-size: 12px;
         margin-bottom: 0px;
         padding: 14px 14px 14px 20px;
-        color: #263238;
+        color: #79ee58;
         font-weight: 500; }
+        
       .sidebar-nav ul li.nav-devider {
         height: 1px;
-        background: rgba(120, 130, 140, 0.13);
+        background: rgba(143, 196, 59, 0.13);
         display: block;
         margin: 15px 0; }
   .sidebar-nav > ul > li > a i {
@@ -1109,7 +1110,7 @@ File: scss
       .topbar ul.dropdown-user li a {
         padding: 9px 15px;
         display: block;
-        color: #67757c; }
+        color: #080800; }
         .topbar ul.dropdown-user li a:hover {
           background: #e9edf2;
           color: #398bf7;
