@@ -1,3 +1,9 @@
+
+    <div class="d-flex justify-content-end mb-3">
+        <a href="index.html" class="btn btn-success waves-effect waves-light " routerLink="/fayuda"><i class="fa fa-plus"></i>
+            Solicitar Ayuda</a>
+    </div>
+
 <section class="au-breadcrumb m-t-75">
     <div class="section__content section__content--p30">
         <div class="row">
@@ -7,11 +13,13 @@
                     <div class="card-body">
                         <div class="d-flex">
                             <div class="stats">
-                                <h1 class="text-white">9062+</h1>
+                                <h1 class="text-white">{{cantSoli}}+</h1>
                                 <h6 class="text-white">Ayudas Solicitadas</h6>
-                                <button class="btn btn-rounded btn-outline btn-light m-t-10 font-14">Check list</button>
+                                <button class="btn btn-rounded btn-outline btn-light m-t-10 font-14"
+                                    (click)="find('inp')">Ver Lista</button>
                             </div>
-                            <div class="stats-icon text-right ml-auto"><i class="fa fa-envelope display-5 op-3 text-dark"></i></div>
+                            <div class="stats-icon text-right ml-auto"><i
+                                    class="fa fa-envelope display-5 op-3 text-dark"></i></div>
                         </div>
                     </div>
                 </div>
@@ -22,300 +30,158 @@
                     <div class="card-body">
                         <div class="d-flex">
                             <div class="stats">
-                                <h1 class="text-white">6509+</h1>
+                                <h1 class="text-white">{{cantAte}}+</h1>
                                 <h6 class="text-white">Atendidas</h6>
-                                <button class="btn btn-rounded btn-outline btn-light m-t-10 font-14">Check list</button>
+                                <button class="btn btn-rounded btn-outline btn-light m-t-10 font-14"
+                                    (click)="find('att')">Ver Lista</button>
                             </div>
-                            <div class="stats-icon text-right ml-auto"><i class="fa fa-heart display-5 op-3 text-dark"></i></div>
+                            <div class="stats-icon text-right ml-auto"><i
+                                    class="fa fa-heart display-5 op-3 text-dark"></i></div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            
+
             <div class="col-lg-4">
                 <div class="card bg-info text-white">
                     <div class="card-body">
                         <div class="d-flex">
                             <div class="stats">
-                                <h1 class="text-white">3257+</h1>
+                                <h1 class="text-white">{{cantNoAte}}+</h1>
                                 <h6 class="text-white">No atendidas</h6>
-                                <button class="btn btn-rounded btn-outline btn-light m-t-10 font-14">Check list</button>
+                                <button class="btn btn-rounded btn-outline btn-light m-t-10 font-14">Ver Lista</button>
                             </div>
-                            <div class="stats-icon text-right ml-auto"><i class="fa fa-user display-5 op-3 text-dark"></i></div>
+                            <div class="stats-icon text-right ml-auto"><i
+                                    class="fa fa-user display-5 op-3 text-dark"></i></div>
                         </div>
                     </div>
                 </div>
             </div>
-           
+
         </div>
 
         <div class="container-fluid">
 
             <div class="row">
-                <div class="card col-8">
+                <div class="card col-lg-8">
                     <div class="card-body">
                         <div class="d-flex">
-                            <h4 class="card-title"><span class="lstick"></span>Listado</h4>
+                            <h4 class="card-title"><span class="lstick"></span>Listado de Ayudas</h4>
                         </div>
-                        <nav class="mt-2">
-                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#recibidos"
-                                    role="tab" aria-controls="nav-home" aria-selected="true">Recibidos</a>
-                                    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#aprobados"
-                                    role="tab" aria-controls="nav-profile" aria-selected="false">Aprobados</a>
-                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#rechazados"
-                                    role="tab" aria-controls="nav-profile" aria-selected="false">Rechazados</a>
+
+                        <div class="bg-light-inverse rounded p-2 text-right mb-4">
+
+                            <div class="btn-group ml-2 row  ">
+                                <button class="btn btn-info btn-sm text-white" (click)="find('inp')">
+                                    <i class="fa fa-filter"></i> Solicitadas
+                                </button>
+                                <button class="btn btn-info btn-sm text-white" (click)="find('not')">
+                                    <i class="fa fa-filter"></i> Notificadas
+                                </button>
+                                <button class="btn btn-info btn-sm text-white" (click)="find('acc')">
+                                    <i class="fa fa-filter"></i> Atendiendose
+                                </button>
+                                <button class="btn btn-info btn-sm text-white" (click)="find('att')">
+                                    <i class="fa fa-filter"></i> Atendidas
+                                </button>
+                                <button class="btn btn-info btn-sm text-white" (click)="find('gra')">
+                                    <i class="fa fa-filter"></i> Agradecidas
+                                </button>
+                                <button class="btn btn-info btn-sm text-white" (click)="find('rej')">
+                                    <i class="fa fa-filter"></i> Rechazadas
+                                </button>
                             </div>
-                        </nav>
 
-                        <div class="tab-content" id="nav-tabContent">
-                            <div class="tab-pane fade show active" id="recibidos" role="tabpanel"
-                                aria-labelledby="nav-home-tab">
-                           
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-    
-                                                <th>First Name</th>
-                                                <th>Last Name</th>
-                                                <th>Username</th>
-                                                <th></th>
-    
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-    
-                                                <td>Deshmukh</td>
-                                                <td>Prohaska</td>
-                                                <td>@Genelia</td>
-                                                <td>
-                                                    <a href="index.html"
+                        </div>
+                        <div class="d-flex">
+                            <h5 class="card-title font-italic text-uppercase">{{titulo}}</h5>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Tipo</th>
+                                        <th>Titulo</th>
+                                        <th>Descripcion</th>
+                                        <th>Fecha</th>
+                                        <th></th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let a of pageOfItems">
+
+                                        <td>{{a.typeDesc}}</td>
+                                        <td>{{a.title}}</td>
+                                        <td>{{a.description}}</td>
+                                        <td>{{(a.created)*1000 | date:'yyyy/MM/dd h:mm:ss a'}}</td>
+                                        <td>
+                                            <ng-container *ngIf="estadoAyuda=='inp'">
+                                                <button class="btn btn-info btn-sm btn-rounded waves-effect waves-light"
+                                                    (click)="notificar(a.id)"><i
+                                                        class="mdi mdi-account-check"></i>Notificar</button>
+                                                <button href="index.html"
+                                                    class="btn btn-danger btn-sm btn-rounded waves-effect waves-light mt-1"
+                                                    (click)="updateAyuda('rej',a.id)"><i
+                                                        class="mdi mdi-account-remove"></i>Rechazar</button>
+                                            </ng-container>
+
+                                            <ng-container *ngIf="estadoAyuda=='not'">
+                                                <button href="index.html"
+                                                    class="btn btn-danger btn-sm btn-rounded waves-effect waves-light ml-1"
+                                                    (click)="updateAyuda('rej',a.id)"><i
+                                                        class="mdi mdi-account-remove"></i>Rechazar</button>
+                                            </ng-container>
+
+                                            <ng-container *ngIf="estadoAyuda=='acc'">
+                                                <button href="index.html"
+                                                    class="btn btn-danger btn-sm btn-rounded waves-effect waves-light ml-1"
+                                                    (click)="updateAyuda('not',a.id)"><i
+                                                        class="mdi mdi-account-remove"></i>Liberar</button>
+                                            </ng-container>
+
+                                            <ng-container *ngIf="estadoAyuda=='att'">
+                                                <button href="index.html"
+                                                    class="btn btn-info btn-sm btn-rounded waves-effect waves-light"
+                                                    (click)="updateAyuda('gra',a.id)"><i
+                                                        class="mdi mdi-account-check"></i>Agradecer</button>
+                                            </ng-container>
+
+
+                                            <ng-container *ngIf="estadoAyuda=='gra'">
+                                                <!-- Lista de Ayudas Agradecidas -->
+                                                <!--  <button href="index.html"
                                                         class="btn btn-info btn-sm btn-rounded waves-effect waves-light"><i
-                                                            class="mdi mdi-account-check"></i>Aprobar</a>
-                                                    <a href="index.html"
-                                                        class="btn btn-danger btn-sm btn-rounded waves-effect waves-light ml-1"><i
-                                                            class="mdi mdi-account-remove"></i>Rechazar</a>
-                                                </td>
-    
-                                            </tr>
-                                            <tr>
-    
-                                                <td>Deshmukh</td>
-                                                <td>Gaylord</td>
-                                                <td>@Ritesh</td>
-                                                <td>
-                                                    <a href="index.html"
-                                                        class="btn btn-info btn-sm btn-rounded waves-effect waves-light"><i
-                                                            class="mdi mdi-account-check"></i>Aprobar</a>
-                                                    <a href="index.html"
-                                                        class="btn btn-danger btn-sm btn-rounded waves-effect waves-light ml-1"><i
-                                                            class="mdi mdi-account-remove"></i>Rechazar</a>
-                                                </td>
-    
-                                            </tr>
-                                            <tr>
-    
-                                                <td>Sanghani</td>
-                                                <td>Gusikowski</td>
-                                                <td>@Govinda</td>
-                                                <td>
-                                                    <a href="index.html"
-                                                        class="btn btn-info btn-sm btn-rounded waves-effect waves-light"><i
-                                                            class="mdi mdi-account-check"></i>Aprobar</a>
-                                                    <a href="index.html"
-                                                        class="btn btn-danger btn-sm btn-rounded waves-effect waves-light ml-1"><i
-                                                            class="mdi mdi-account-remove"></i>Rechazar</a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-    
-                                                <td>Roshan</td>
-                                                <td>Rogahn</td>
-                                                <td>@Hritik</td>
-                                                <td>
-                                                    <a href="index.html"
-                                                        class="btn btn-info btn-sm btn-rounded waves-effect waves-light"><i
-                                                            class="mdi mdi-account-check"></i>Aprobar</a>
-                                                    <a href="index.html"
-                                                        class="btn btn-danger btn-sm btn-rounded waves-effect waves-light ml-1"><i
-                                                            class="mdi mdi-account-remove"></i>Rechazar</a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-    
-                                                <td>Joshi</td>
-                                                <td>Hickle</td>
-                                                <td>@Maruti</td>
-                                                <td>
-                                                    <a href="index.html"
-                                                        class="btn btn-info btn-sm btn-rounded waves-effect waves-light"><i
-                                                            class="mdi mdi-account-check"></i>Aprobar</a>
-                                                    <a href="index.html"
-                                                        class="btn btn-danger btn-sm btn-rounded waves-effect waves-light ml-1"><i
-                                                            class="mdi mdi-account-remove"></i>Rechazar</a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-    
-                                                <td>Nigam</td>
-                                                <td>Eichmann</td>
-                                                <td>@Sonu</td>
-                                                <td>
-                                                    <a href="index.html"
-                                                        class="btn btn-info btn-sm btn-rounded waves-effect waves-light"><i
-                                                            class="mdi mdi-account-check"></i>Aprobar</a>
-                                                    <a href="index.html"
-                                                        class="btn btn-danger btn-sm btn-rounded waves-effect waves-light ml-1"><i
-                                                            class="mdi mdi-account-remove"></i>Rechazar</a>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                                            class="mdi mdi-account-check"></i>Aprobar</button> -->
+                                            </ng-container>
 
-                            </div>
-                            <div class="tab-pane fade" id="aprobados" role="tabpanel" aria-labelledby="nav-home-tab">
-                         
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-    
-                                                <th>First Name</th>
-                                                <th>Last Name</th>
-                                                <th>Username</th>
-    
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                          
-                                            <tr>
-    
-                                                <td>Sanghani</td>
-                                                <td>Gusikowski</td>
-                                                <td>@Govinda</td>
-                                                <td>
-                                                    <a href="index.html"
-                                                    class="btn btn-danger btn-sm btn-rounded waves-effect waves-light ml-1"><i
-                                                        class="mdi mdi-account-remove"></i>Rechazar</a>
-                                             
-                                                </td>
-                                            </tr>
-                                            <tr>
-    
-                                                <td>Roshan</td>
-                                                <td>Rogahn</td>
-                                                <td>@Hritik</td>
-                                                <td>
-                                                    <a href="index.html"
-                                                    class="btn btn-danger btn-sm btn-rounded waves-effect waves-light ml-1"><i
-                                                        class="mdi mdi-account-remove"></i>Rechazar</a>
-                                             
-                                                </td>
-                                            </tr>
-                                            <tr>
-    
-                                                <td>Joshi</td>
-                                                <td>Hickle</td>
-                                                <td>@Maruti</td>
-                                                <td>
-                                                    <a href="index.html"
-                                                        class="btn btn-danger btn-sm btn-rounded waves-effect waves-light ml-1"><i
-                                                            class="mdi mdi-account-remove"></i>Rechazar</a>
-                                                  
-                                                </td>
-                                            </tr>
-                                            <tr>
-    
-                                                <td>Nigam</td>
-                                                <td>Eichmann</td>
-                                                <td>@Sonu</td>
-                                                <td>
-                                                    <a href="index.html"
-                                                    class="btn btn-danger btn-sm btn-rounded waves-effect waves-light ml-1"><i
-                                                        class="mdi mdi-account-remove"></i>Rechazar</a>
-                                                
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                </div>
-                            <div class="tab-pane fade" id="rechazados" role="tabpanel" aria-labelledby="nav-home-tab">
-                         
-                            <div class="table-responsive">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
+                                            <ng-container *ngIf="estadoAyuda=='rej'">
+                                                <button href="index.html"
+                                                    class="btn btn-info btn-sm btn-rounded waves-effect waves-light"
+                                                    (click)="updateAyuda('inp',a.id)"><i
+                                                        class="mdi mdi-account-check"></i>Reabrir</button>
+                                            </ng-container>
 
-                                            <th>First Name</th>
-                                            <th>Last Name</th>
-                                            <th>Username</th>
+                                        </td>
 
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                      
-                                        <tr>
+                                    </tr>
+                                    <tr *ngIf="listAyudas.length <= 0">
+                                        <td colspan="5">No se encontraron registros de ayuda</td>
+                                    </tr>
 
-                                            <td>Sanghani</td>
-                                            <td>Gusikowski</td>
-                                            <td>@Govinda</td>
-                                            <td>
-                                                <a href="index.html"
-                                                    class="btn btn-info btn-sm btn-rounded waves-effect waves-light"><i
-                                                        class="mdi mdi-account-check"></i>Aprobar</a>
-                                         
-                                            </td>
-                                        </tr>
-                                        <tr>
+                                </tbody>
 
-                                            <td>Roshan</td>
-                                            <td>Rogahn</td>
-                                            <td>@Hritik</td>
-                                            <td>
-                                                <a href="index.html"
-                                                    class="btn btn-info btn-sm btn-rounded waves-effect waves-light"><i
-                                                        class="mdi mdi-account-check"></i>Aprobar</a>
-                                         
-                                            </td>
-                                        </tr>
-                                        <tr>
+                            </table>
+                            <jw-pagination [items]="listAyudas" (changePage)="onChangePage($event)">
+                            </jw-pagination>
 
-                                            <td>Joshi</td>
-                                            <td>Hickle</td>
-                                            <td>@Maruti</td>
-                                            <td>
-                                                <a href="index.html"
-                                                    class="btn btn-info btn-sm btn-rounded waves-effect waves-light"><i
-                                                        class="mdi mdi-account-check"></i>Aprobar</a>
-                                              
-                                            </td>
-                                        </tr>
-                                        <tr>
-
-                                            <td>Nigam</td>
-                                            <td>Eichmann</td>
-                                            <td>@Sonu</td>
-                                            <td>
-                                                <a href="index.html"
-                                                    class="btn btn-info btn-sm btn-rounded waves-effect waves-light"><i
-                                                        class="mdi mdi-account-check"></i>Aprobar</a>
-                                            
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            </div>
                         </div>
                     </div>
                 </div>
-              
-                <div class="col-4">
+
+                <div class="col-lg-4">
                     <div class="card">
                         <div class="card-body">
                             <div class="d-flex">

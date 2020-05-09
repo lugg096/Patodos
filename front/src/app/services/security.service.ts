@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
 import { Router } from '@angular/router';
 import { environment as env } from 'src/environments/environment';
 import { CommonService } from './shared/common.service';
@@ -13,7 +13,10 @@ export class SecurityService {
 
   constructor(private _http: HttpClient,
     private _util: CommonService,
-    private router: Router) { }
+    private router: Router) { 
+
+
+    }
 
   sign(user: any) {
 
@@ -58,6 +61,8 @@ export class SecurityService {
       })
     );
   }
+
+  
 
   extendSession() {
     let URL = env.URI.concat('security/extendSession');
