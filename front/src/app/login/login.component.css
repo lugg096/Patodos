@@ -12,16 +12,8 @@
 polygon {
   mix-blend-mode: multiply;
 }
-body{
-	margin: 0;
-	padding: 0;
-	background-color: #0e6cc4;
-	overflow-x:hidden;
-	overflow-y:hidden;
-}
 
 /*waves****************************/
-
 
 .box {
 	position: fixed;
@@ -273,7 +265,13 @@ button:hover {
 .container .info span .fa {
   color: #EF3B3A;
 }
-body {
+.cuerpo {
+  margin: 0;
+	padding: 0;
+	background-color: #0e6cc4;
+	overflow-x:hidden;
+  overflow-y:hidden;
+  height: 800px;
 
   background: -webkit-linear-gradient(right, #f9fb5d, #3cabe7);
   background: -moz-linear-gradient(right, #42df2a, #723ce7);

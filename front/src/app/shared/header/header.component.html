@@ -1,74 +1,84 @@
-   <!-- Topbar header - style you can find in pages.scss -->
+<!-- Topbar header - style you can find in pages.scss -->
+<!-- ============================================================== -->
+<header class="topbar py-0 my-0">
+    <nav class="navbar top-navbar navbar-expand-md navbar-light">
         <!-- ============================================================== -->
-        <header class="topbar">
-            <nav class="navbar top-navbar navbar-expand-md navbar-light">
-                <!-- ============================================================== -->
-                <!-- Logo -->
-                <!-- ============================================================== -->
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html">
-                        <!-- Logo icon --><b>
-                    
-                      <img src="assets/images/paTodos2.PNG" id="logo" alt="thumbnail" class="form-control img-thumbnail"
-             style="width: 190px">
-             
-         
-
-                    <img src="assets/images/gifheader.gif" alt="Smiley face" width="82" height="82" align="middle" style="margin:0px 450px">
-            
-            </b>
-                        
-                       
-                        <!--End Logo icon -->
-                        <!-- Logo text -->
-                        <span>
-                        </span>
-                    </a>
-
-                </div>
-              
-                <!-- ============================================================== -->
-                <!-- End Logo -->
-                <!-- ============================================================== -->
-                <div class="navbar-collapse">
-                    <!-- ============================================================== -->
-                    <!-- toggle and nav items -->
-                    <!-- ============================================================== -->
-                    <ul class="navbar-nav mr-auto">
-                        <!-- This is  -->
-                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
-                    </ul>
-                    <!-- ============================================================== -->
-                    <!-- User profile and search -->
-                    <!-- ============================================================== -->
-                    <ul class="navbar-nav my-lg-0">
-                        <!-- ============================================================== -->
-                        <!-- Profile -->
-                        <!-- ============================================================== -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/users/1.jpg" alt="user" class="profile-pic" /></a>
-                            <div class="dropdown-menu dropdown-menu-right animated flipInY">
-                                <ul class="dropdown-user">
-                                    <li>
-                                        <div class="dw-user-box">
-                                            <div class="u-img"><img src="../../../assets/images/users/1.jpg" alt="user"></div>
-                                            <div class="u-text">
-                                                <h4>{{user.fullName}}</h4>
-                                                <p class="text-muted">{{user.userEmail}}</p><a href="javascript:void(0)" class="btn btn-rounded btn-danger btn-sm">Ver Perfil</a></div>
-                                        </div>
-                                    </li>
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="javascript:void(0)"><i class="ti-user"></i> Mi Perfil</a></li>
-                                    <li><a href="javascript:void(0)"><i class="ti-wallet"></i> Mi Balance</a></li>
-                                  <!--   <li><a href="javascript:void(0)"><i class="ti-email"></i> Inbox</a></li> -->
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="javascript:void(0)" (click)="_security.logout()"><i class="fa fa-power-off"></i> Logout</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+        <!-- Logo -->
         <!-- ============================================================== -->
-        <!-- End Topbar header -->
+        <div class="navbar-header pl-0" style="background-color: #ffa500;">
+            <a class="navbar-brand" href="index.html">
+                <!-- Logo icon -->
+                <b> 
+
+                    <img src="assets/images/paTodos2.PNG" id="logo" alt="thumbnail" class="form-control img-thumbnail"
+                        style="width: 190px" class="p-0">
+
+                    </b>
+
+               
+
+
+                <!--End Logo icon -->
+                <!-- Logo text -->
+                <span>
+                </span>
+            </a>
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Logo -->
+        <!-- ============================================================== -->
+        <div class="navbar-collapse">
+            <!-- ============================================================== -->
+            <!-- toggle and nav items -->
+            <!-- ============================================================== -->
+       
+            <img src="assets/images/gifheader.gif" alt="Smiley face" height="82" align="middle"
+             style="margin-left: 40%;">
+      
+
+            <ul class="navbar-nav mr-auto">
+                <!-- This is  -->
+                <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up waves-effect waves-dark"
+                        href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+            </ul>
+            <!-- ============================================================== -->
+            <!-- User profile and search -->
+            <!-- ============================================================== -->
+            <ul class="navbar-nav my-lg-0">
+                <!-- ============================================================== -->
+                <!-- Profile -->
+                <!-- ============================================================== -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false"><img src="../assets/images/users/1.jpg" alt="user"
+                            class="profile-pic" /></a>
+                    <div class="dropdown-menu dropdown-menu-right animated flipInY">
+                        <ul class="dropdown-user">
+                            <li>
+                                <div class="dw-user-box">
+                                    <div class="u-img"><img src="../../../assets/images/users/1.jpg" alt="user"></div>
+                                    <div class="u-text">
+                                        <h4>{{user.fullName}}</h4>
+                                        <p class="text-muted">{{user.userEmail}}</p><a href="javascript:void(0)"
+                                            class="btn btn-rounded btn-danger btn-sm">Ver Perfil</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="javascript:void(0)"><i class="ti-user"></i> Mi Perfil</a></li>
+                            <li><a href="javascript:void(0)"><i class="ti-wallet"></i> Mi Balance</a></li>
+                            <!--   <li><a href="javascript:void(0)"><i class="ti-email"></i> Inbox</a></li> -->
+                            <li role="separator" class="divider"></li>
+                            <li><a href="javascript:void(0)" (click)="_security.logout()"><i
+                                        class="fa fa-power-off"></i> Logout</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<!-- ============================================================== -->
+<!-- End Topbar header -->

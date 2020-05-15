@@ -12,7 +12,6 @@ export class LoginGuard implements CanActivate {
 
   canActivate(): Observable<boolean> {
     if (localStorage.getItem(env.STORE.TOKEN)) return of(true);
-
     this.router.navigate(['/login']);
     return of(false);;
 
