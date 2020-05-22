@@ -3,6 +3,7 @@ import { AyudasService } from 'src/app/services/ayudas.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import swal from 'sweetalert2';
 import { Router } from '@angular/router';
+import { LoginComponent } from 'src/app/login/login.component';
 
 @Component({
   selector: 'app-formayuda',
@@ -39,6 +40,9 @@ export class FormayudaComponent implements OnInit {
       latitude: this.latitude,
       longitude: this.longitude
     })
+    console.log(this.ayudaForm.value);
+/*     return; */
+
     this._ayudas.solicitarAyuda(this.ayudaForm.value).subscribe(res=>{
       if(res) swal.fire('Genial!', 'Ayuda solicitada', 'success').then(() => { this.router.navigate(['/ayudas']); });
       else swal.fire('Lo sentimos!', 'Error en l solicitud', 'error');    

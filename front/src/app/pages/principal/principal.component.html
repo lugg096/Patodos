@@ -1,59 +1,132 @@
+<div class="d-flex justify-content-end mb-3">
+    <button class="btn btn-primary btn-sm btn-rounded waves-effect waves-light p-2" (click)="modalAyuda()"><i
+            class="fa fa-plus"></i>
+        Solicitar Ayuda</button>
+</div>
 
-    <div class="d-flex justify-content-end mb-3">
-        <a href="index.html" class="btn btn-success waves-effect waves-light " routerLink="/fayuda"><i class="fa fa-plus"></i>
-            Solicitar Ayuda</a>
-    </div>
+<section class="m-t-75">
+    <div>
+        <div class="row">
+            <div class="col-lg-12 mr-0 ">
+                <div class="card bg-primary text-white">
+                    <div class="card-body ">
 
-<section class="au-breadcrumb m-t-75">
-    <div class="section__content section__content--p30">
+                        <div class="row">
+                            <div class="col-2">
+                                <h1 class="text-white mt-2">{{coins}}+ </h1>
+                            </div>
+                            <div class="col-7"></div>
+                            <div class="col-2">
+                                <h4 class="text-white text-right mt-3">Happy Coins </h4>
+                            </div>
+                            <div class="col-1 ml-auto"><i class="mdi mdi-coin display-4 text-white"></i></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="row">
 
-            <div class="col-lg-4">
+
+            <div class="col-lg-2 mr-0 pr-0">
                 <div class="card bg-success text-white">
                     <div class="card-body">
                         <div class="d-flex">
-                            <div class="stats">
-                                <h1 class="text-white">{{cantSoli}}+</h1>
-                                <h6 class="text-white">Ayudas Solicitadas</h6>
+                            <div class="">
+                                <h2 class="text-white">{{cantSoli}}+</h2>
+                                <h6 class="text-white">Ayudas</h6>
                                 <button class="btn btn-rounded btn-outline btn-light m-t-10 font-14"
                                     (click)="find('inp')">Ver Lista</button>
                             </div>
-                            <div class="stats-icon text-right ml-auto"><i
-                                    class="fa fa-envelope display-5 op-3 text-dark"></i></div>
+                            <div class=" text-right ml-auto"><i class="fa fa-envelope display-5 op-3 text-dark"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-4">
-                <div class="card bg-primary text-white">
+            <div class="col-lg-2 pr-0">
+                <div class="card bg-warning text-white">
                     <div class="card-body">
                         <div class="d-flex">
-                            <div class="stats">
-                                <h1 class="text-white">{{cantAte}}+</h1>
+                            <div class="">
+                                <h2 class="text-white">{{cantAte}}+</h2>
                                 <h6 class="text-white">Atendidas</h6>
                                 <button class="btn btn-rounded btn-outline btn-light m-t-10 font-14"
                                     (click)="find('att')">Ver Lista</button>
                             </div>
-                            <div class="stats-icon text-right ml-auto"><i
-                                    class="fa fa-heart display-5 op-3 text-dark"></i></div>
+                            <div class=" text-right ml-auto"><i
+                                    class="mdi mdi-account-check display-5 op-3 text-dark"></i></div>
                         </div>
                     </div>
                 </div>
             </div>
 
 
-            <div class="col-lg-4">
+            <div class="col-lg-2 pr-0">
+                <div class="card bg-dark text-white">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <div class="">
+                                <h2 class="text-white">{{cantNoAte}}+</h2>
+                                <h6 class="text-white">No atendidas</h6>
+                                <button class="btn btn-rounded btn-outline btn-light m-t-10 font-14"
+                                    (click)="find('not')">Ver Lista</button>
+                            </div>
+                            <div class=" text-right ml-auto"><i
+                                    class="mdi mdi-account-minus display-5 op-3 text-white"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 pr-0">
                 <div class="card bg-info text-white">
                     <div class="card-body">
                         <div class="d-flex">
-                            <div class="stats">
-                                <h1 class="text-white">{{cantNoAte}}+</h1>
-                                <h6 class="text-white">No atendidas</h6>
-                                <button class="btn btn-rounded btn-outline btn-light m-t-10 font-14">Ver Lista</button>
+                            <div class="">
+                                <h2 class="text-white">{{cantAtendiendose}}+</h2>
+                                <h6 class="text-white">Atendiendose</h6>
+                                <button class="btn btn-rounded btn-outline btn-light m-t-10 font-14"
+                                    (click)="find('acc')">Ver Lista</button>
                             </div>
-                            <div class="stats-icon text-right ml-auto"><i
-                                    class="fa fa-user display-5 op-3 text-dark"></i></div>
+                            <div class=" text-right ml-auto"><i
+                                    class="mdi mdi-account-convert display-5 op-3 text-dark"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 pr-0">
+                <div class="card bg-primary text-white">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <div class="">
+                                <h2 class="text-white">{{cantAgradecidas}}+</h2>
+                                <h6 class="text-white">Agradecidas</h6>
+                                <button class="btn btn-rounded btn-outline btn-light m-t-10 font-14"
+                                    (click)="find('gra')">Ver Lista</button>
+                            </div>
+                            <div class=" text-right ml-auto"><i class="fa fa-heart display-5 op-3 text-dark"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-2">
+                <div class="card bg-danger text-white">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <div class="">
+                                <h2 class="text-white">{{cantRechazadas}}+</h2>
+                                <h6 class="text-white">Rechazadas</h6>
+                                <button class="btn btn-rounded btn-outline btn-light m-t-10 font-14"
+                                    (click)="find('rej')">Ver Lista</button>
+                            </div>
+                            <div class=" text-right ml-auto"><i
+                                    class="mdi mdi-account-remove display-5 op-3 text-dark"></i></div>
                         </div>
                     </div>
                 </div>
@@ -70,7 +143,7 @@
                             <h4 class="card-title"><span class="lstick"></span>Listado de Ayudas</h4>
                         </div>
 
-                        <div class="bg-light-inverse rounded p-2 text-right mb-4">
+                        <!--      <div class="bg-light-inverse rounded p-2 text-right mb-4">
 
                             <div class="btn-group ml-2 row  ">
                                 <button class="btn btn-info btn-sm text-white" (click)="find('inp')">
@@ -93,9 +166,19 @@
                                 </button>
                             </div>
 
-                        </div>
-                        <div class="d-flex">
-                            <h5 class="card-title font-italic text-uppercase">{{titulo}}</h5>
+                        </div> -->
+                        <div class="row">
+                            <h5 class="card-title font-italic text-uppercase col-md-11">{{titulo}}</h5>
+                            <div class="col-md-1">
+                                <button class="btn btn-inverse btn-sm btn-rounded" data-toggle="tooltip"
+                                    data-placement="bottom" title="Actualizar" (click)="refreshList()">
+                                    <i class="mdi mdi-refresh" *ngIf="refresh!=true"></i>
+                                    <i class="fa fa-spinner fa-pulse" *ngIf="refresh==true"></i>
+                                </button>
+                            </div>
+
+
+
                         </div>
 
                         <div class="table-responsive">
@@ -111,6 +194,17 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <tr *ngIf="listAyudas.length <= 0 && loadRegistros">
+                                        <td colspan="5">
+                                            <div class="alert alert-secondary" role="alert">
+                                                <span><i class="fa fa-spinner fa-pulse"></i>
+                                                    Cargando registros...
+                                                </span>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+
                                     <tr *ngFor="let a of pageOfItems">
 
                                         <td>{{a.typeDesc}}</td>
@@ -119,62 +213,105 @@
                                         <td>{{(a.created)*1000 | date:'yyyy/MM/dd h:mm:ss a'}}</td>
                                         <td>
                                             <ng-container *ngIf="estadoAyuda=='inp'">
+
+
+
+                                                <!--  <div class="btn-group">
+                                                    <button class="btn btn-secondary  dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fa fa-cog" aria-hidden="true"></i>
+                                                      </button>
+                                                    
+                                                    <div class="dropdown-menu">
+                                                        <button class="dropdown-item" type="button" data-toggle="modal"
+                                                            (click)="modalAyuda(a)">
+                                                            <i class="fa fa-pencil-square-o text-info"></i>
+                                                            Editar ayuda
+                                                        </button>
+                                                        <button class="dropdown-item" type="button" data-toggle="modal"
+                                                            (click)="notificar(a.id)">
+                                                            <i class="mdi mdi-account-check text-info"></i>
+                                                            Notificar
+                                                        </button>
+                                                        <button class="dropdown-item "  type="button" data-toggle="modal"
+                                                            (click)="updateAyuda('rej',a)">
+                                                            <i class="mdi mdi-account-remove text-danger"
+                                                                *ngIf="a.cargando!=true"></i>
+                                                            <i class="fa fa-spinner fa-pulse"
+                                                                *ngIf="a.cargando==true"></i>
+                                                            Rechazar
+                                                        </button>
+                                                    </div>
+                                                </div> -->
+
                                                 <button class="btn btn-info btn-sm btn-rounded waves-effect waves-light"
+                                                    (click)="modalAyuda(a)"><i class="fa fa-pencil-square-o"
+                                                        aria-hidden="true"></i>Editar</button>
+
+                                                <button
+                                                    class="btn btn-info btn-sm btn-rounded waves-effect waves-light my-1"
                                                     (click)="notificar(a.id)"><i
                                                         class="mdi mdi-account-check"></i>Notificar</button>
-                                                <button href="index.html"
-                                                    class="btn btn-danger btn-sm btn-rounded waves-effect waves-light mt-1"
-                                                    (click)="updateAyuda('rej',a.id)"><i
-                                                        class="mdi mdi-account-remove"></i>Rechazar</button>
+                                                <button
+                                                    class="btn btn-danger btn-sm btn-rounded waves-effect waves-light"
+                                                    (click)="updateAyuda('rej',a)">
+                                                    <i class="mdi mdi-account-remove" *ngIf="a.cargando!=true"></i>
+                                                    <i class="fa fa-spinner fa-pulse" *ngIf="a.cargando==true"></i>
+                                                    Rechazar</button>
+
                                             </ng-container>
 
                                             <ng-container *ngIf="estadoAyuda=='not'">
-                                                <button href="index.html"
+                                                <button
                                                     class="btn btn-danger btn-sm btn-rounded waves-effect waves-light ml-1"
-                                                    (click)="updateAyuda('rej',a.id)"><i
-                                                        class="mdi mdi-account-remove"></i>Rechazar</button>
+                                                    (click)="updateAyuda('rej',a)">
+                                                    <i class="mdi mdi-account-remove" *ngIf="a.cargando!=true"></i>
+                                                    <i class="fa fa-spinner fa-pulse" *ngIf="a.cargando==true"></i>
+                                                    Rechazar</button>
                                             </ng-container>
 
                                             <ng-container *ngIf="estadoAyuda=='acc'">
-                                                <button href="index.html"
+                                                <button
                                                     class="btn btn-danger btn-sm btn-rounded waves-effect waves-light ml-1"
-                                                    (click)="updateAyuda('not',a.id)"><i
-                                                        class="mdi mdi-account-remove"></i>Liberar</button>
+                                                    (click)="updateAyuda('not',a)">
+                                                    <i class="mdi mdi-account-remove" *ngIf="a.cargando!=true"></i>
+                                                    <i class="fa fa-spinner fa-pulse" *ngIf="a.cargando==true"></i>
+                                                    Liberar</button>
                                             </ng-container>
 
                                             <ng-container *ngIf="estadoAyuda=='att'">
-                                                <button href="index.html"
-                                                    class="btn btn-info btn-sm btn-rounded waves-effect waves-light"
-                                                    (click)="updateAyuda('gra',a.id)"><i
-                                                        class="mdi mdi-account-check"></i>Agradecer</button>
+                                                <button class="btn btn-info btn-sm btn-rounded waves-effect waves-light"
+                                                    (click)="updateAyuda('gra',a)">
+                                                    <i class="mdi mdi-account-check" *ngIf="a.cargando!=true"></i>
+                                                    <i class="fa fa-spinner fa-pulse" *ngIf="a.cargando==true"></i>
+                                                    Agradecer</button>
                                             </ng-container>
 
 
                                             <ng-container *ngIf="estadoAyuda=='gra'">
                                                 <!-- Lista de Ayudas Agradecidas -->
-                                                <!--  <button href="index.html"
-                                                        class="btn btn-info btn-sm btn-rounded waves-effect waves-light"><i
+                                                <!--  <button  class="btn btn-info btn-sm btn-rounded waves-effect waves-light"><i
                                                             class="mdi mdi-account-check"></i>Aprobar</button> -->
                                             </ng-container>
 
                                             <ng-container *ngIf="estadoAyuda=='rej'">
-                                                <button href="index.html"
-                                                    class="btn btn-info btn-sm btn-rounded waves-effect waves-light"
-                                                    (click)="updateAyuda('inp',a.id)"><i
-                                                        class="mdi mdi-account-check"></i>Reabrir</button>
+                                                <button class="btn btn-info btn-sm btn-rounded waves-effect waves-light"
+                                                    (click)="updateAyuda('inp',a)">
+                                                    <i class="mdi mdi-account-check" *ngIf="a.cargando!=true"></i>
+                                                    <i class="fa fa-spinner fa-pulse" *ngIf="a.cargando==true"></i>
+                                                    Reabrir</button>
                                             </ng-container>
 
                                         </td>
 
                                     </tr>
-                                    <tr *ngIf="listAyudas.length <= 0">
-                                        <td colspan="5">No se encontraron registros de ayuda</td>
+                                    <tr *ngIf="listAyudas.length <= 0 && !loadRegistros">
+                                        <td colspan="5">No se encontraron registros.</td>
                                     </tr>
 
                                 </tbody>
 
                             </table>
-                            <jw-pagination [items]="listAyudas" (changePage)="onChangePage($event)">
+                            <jw-pagination [items]="listAyudas" locale="es" i18n (changePage)="onChangePage($event)">
                             </jw-pagination>
 
                         </div>
@@ -185,21 +322,25 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="d-flex">
-                                <h4 class="card-title"><span class="lstick"></span>Asociados</h4>
+                                <h4 class="card-title"><span class="lstick"></span>Últimos Ayudados</h4>
                             </div>
                             <div class="message-box contact-box">
                                 <div class="message-widget contact-widget">
-                                    <!-- Message -->
-                                    <a href="#">
-                                        <div class="user-img"> <img src="../assets/images/users/1.jpg" alt="user"
-                                                class="img-circle"> <span
-                                                class="profile-status online pull-right"></span> </div>
-                                        <div class="mail-contnet">
-                                            <h5>Pavan kumar</h5> <span class="mail-desc">info@wrappixel.com</span>
-                                        </div>
-                                    </a>
-                                    <!-- Message -->
-                                    <a href="#">
+
+                                    <ng-container *ngFor="let a of listUltimasAyudas">
+                                        <a href="javascript:void(0)" >
+                                            <div class="user-img"> <img [src]="a.avatar" alt="user" class="img-circle">
+                                                <span class="profile-status online pull-right"></span> </div>
+                                            <div class="mail-contnet">
+                                                <h5>{{a.title}}</h5> <span class="mail-desc">{{a.org}}</span>
+                                            </div>
+                                            <small
+                                                class="mail-desc text-muted font-italic">{{(a.updated)*1000 | date:'yyyy/MM/dd h:mm:ss a'}}</small>
+                                        </a>
+                                    </ng-container>
+
+
+                                    <!--     <a href="javascript:void(0)" >
                                         <div class="user-img"> <img src="../assets/images/users/2.jpg" alt="user"
                                                 class="img-circle"> <span class="profile-status busy pull-right"></span>
                                         </div>
@@ -207,8 +348,8 @@
                                             <h5>Sonu Nigam</h5> <span class="mail-desc">pamela1987@gmail.com</span>
                                         </div>
                                     </a>
-                                    <!-- Message -->
-                                    <a href="#">
+                                
+                                    <a href="javascript:void(0)" >
                                         <div class="user-img"> <span class="round">A</span> <span
                                                 class="profile-status away pull-right"></span> </div>
                                         <div class="mail-contnet">
@@ -216,8 +357,8 @@
                                                 class="mail-desc">cruise1298.fiplip@gmail.com</span>
                                         </div>
                                     </a>
-                                    <!-- Message -->
-                                    <a href="#">
+                                  
+                                    <a href="javascript:void(0)" >
                                         <div class="user-img"> <img src="../assets/images/users/4.jpg" alt="user"
                                                 class="img-circle"> <span
                                                 class="profile-status offline pull-right"></span> </div>
@@ -225,8 +366,8 @@
                                             <h5>Pavan kumar</h5> <span class="mail-desc">kat@gmail.com</span>
                                         </div>
                                     </a>
-                                    <!-- Message -->
-                                    <a href="#">
+                                
+                                    <a href="javascript:void(0)" >
                                         <div class="user-img"> <img src="../assets/images/users/5.jpg" alt="user"
                                                 class="img-circle"> <span
                                                 class="profile-status offline pull-right"></span> </div>
@@ -234,15 +375,15 @@
                                             <h5>Andrew</h5> <span class="mail-desc">and@gmail.com</span>
                                         </div>
                                     </a>
-                                    <!-- Message -->
-                                    <a href="#">
+                               
+                                    <a href="javascript:void(0)" >
                                         <div class="user-img"> <img src="../assets/images/users/6.jpg" alt="user"
                                                 class="img-circle"> <span
                                                 class="profile-status offline pull-right"></span> </div>
                                         <div class="mail-contnet">
                                             <h5>Jonathan Jones</h5> <span class="mail-desc">jj@gmail.com</span>
                                         </div>
-                                    </a>
+                                    </a> -->
                                 </div>
                             </div>
                         </div>

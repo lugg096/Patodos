@@ -13,6 +13,12 @@ import { InvitacionesComponent } from './invitaciones/invitaciones.component';
 import { ForminvitacionComponent } from './forminvitacion/forminvitacion.component';
 import { FormayudaComponent } from './formayuda/formayuda.component';
 import { JwPaginationComponent } from 'jw-angular-pagination';
+import localeEs from '@angular/common/locales/es';
+
+import { registerLocaleData } from '@angular/common';
+import { AyudaComponent } from './modals/ayuda/ayuda.component';
+registerLocaleData(localeEs);
+/* defineLocale('es', esLocale);  */
 
 @NgModule({
     declarations: [
@@ -22,7 +28,8 @@ import { JwPaginationComponent } from 'jw-angular-pagination';
         PerfilComponent,
         InvitacionesComponent,
         ForminvitacionComponent,
-        FormayudaComponent
+        FormayudaComponent,
+        AyudaComponent
     ],
     exports: [
         PrincipalComponent

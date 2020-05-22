@@ -2,9 +2,9 @@
     <!-- Column -->
     <div class="col-lg-4 col-xlg-3 col-md-5">
         <div class="card">
-            <div class="card-body">
-                <div class="m-t-30"> <img src="assets/images/users/5.jpg" class="img-circle" width="150" />
-                    <h4 class="card-title m-t-10">Hanna Gover</h4>
+            <div class="card-body text-center">
+                <div class="m-t-30"> <img  [src]="user.orgs[0].orgAvatar"  class="img-circle" width="150" />
+                    <h4 class="card-title m-t-10">{{user.fullName}}</h4>
                     <h6 class="card-subtitle">Accoubts Manager Amix corp</h6>
                     <div class="row text-center justify-content-md-center">
                         <div class="col-4"><a href="javascript:void(0)" class="link"><i class="icon-people"></i> <span class="font-medium">254</span></a></div>
@@ -21,7 +21,7 @@
             <div class="card-body">
                 <form class="form-horizontal form-material">
                     <div class="form-group">
-                        <label class="col-md-12">Full Name</label>
+                        <label class="col-md-12">Razón social</label>
                         <div class="col-md-12">
                             <input type="text" placeholder="Johnathan Doe" class="form-control form-control-line">
                         </div>
@@ -39,32 +39,27 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-md-12">Phone No</label>
+                        <label class="col-md-12">Teléfono</label>
                         <div class="col-md-12">
                             <input type="text" placeholder="123 456 7890" class="form-control form-control-line">
                         </div>
                     </div>
+                
                     <div class="form-group">
-                        <label class="col-md-12">Message</label>
-                        <div class="col-md-12">
-                            <textarea rows="5" class="form-control form-control-line"></textarea>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-12">Select Country</label>
+                        <label class="col-sm-12">Selecione Ciudad</label>
                         <div class="col-sm-12">
                             <select class="form-control form-control-line">
-                                <option>London</option>
-                                <option>India</option>
-                                <option>Usa</option>
-                                <option>Canada</option>
-                                <option>Thailand</option>
+                                <option>Lima</option>
+                                <option>Arequipa</option>
+                                <option>Cusco</option>
+                                <option>Hancavelica</option>
+                                <option>Puno</option>
                             </select>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-sm-12">
-                            <button class="btn btn-success">Update Profile</button>
+                            <button class="btn btn-success">Actualizar Perfil</button>
                         </div>
                     </div>
                 </form>

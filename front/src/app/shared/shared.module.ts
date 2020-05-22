@@ -6,6 +6,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { ModalService } from '../services/shared/modal.service';
 
 @NgModule({
     imports: [ 
@@ -23,7 +24,10 @@ import { CommonModule } from '@angular/common';
         HeaderComponent,
         SidebarComponent,
         BreadcrumbsComponent
-    ]
+    ],
+    providers: [
+        ModalService
+      ]
 })
 
 export class SharedModule { }

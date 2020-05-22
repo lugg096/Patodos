@@ -45,7 +45,9 @@ export class LoginComponent implements OnInit {
        this.msg = '';
        this.loading = true;
        this._security.sign(this.loginForm.value)
-         .subscribe(_ => {
+         .subscribe(res => {
+           console.log('USUARIO',res);
+           
            this.loading = false;
            this.router.navigate(['/ayudas']);
          }, err => {

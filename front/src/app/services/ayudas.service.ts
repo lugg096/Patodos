@@ -21,9 +21,12 @@ export class AyudasService {
     const headers = new HttpHeaders({
       'Authorization': 'Bearer ' + localStorage.getItem(env.STORE.TOKEN)
     })
+
+    
     let URI = env.URI.concat('requests/' + id + '/edit/');
     return this.http.post<any[]>(URI, valor, { headers });
   }
+
 
   getTipoAyudas() {
     const headers = new HttpHeaders({
@@ -39,6 +42,14 @@ export class AyudasService {
     })
     let URI = env.URI.concat('request-help/');
     return this.http.post<any[]>(URI, valor, { headers });
+  }
+
+  getUltimasAyudas(){
+    const headers = new HttpHeaders({
+      'Authorization': 'Bearer ' + localStorage.getItem(env.STORE.TOKEN)
+    })
+    let URI = env.URI.concat('associates/');
+    return this.http.get<any[]>(URI, { headers });
   }
 
 

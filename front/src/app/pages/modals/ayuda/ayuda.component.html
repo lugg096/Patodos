@@ -1,0 +1,57 @@
+<div class="modal-header">
+    <h5 class="modal-title pull-left"> Solicitar Ayuda </h5>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body p-3">
+
+    <div class="form-group">
+        <label>Solicitado por:</label>
+        <input type="text" class="form-control " [(ngModel)]="creadorAyuda" disabled>
+    </div>
+
+    <div class="form-group">
+        <label>Tipo de ayuda: </label>
+        <select [(ngModel)]="ayuda.type" class="form-control">
+            <option value=null>-- Seleccione --</option>
+            <option *ngFor="let t of tipoAyudaList" [value]="t.id">{{t.description}}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Título</label>
+        <input type="text" class="form-control" [(ngModel)]="ayuda.title" (change)="titleInvalid=false">
+    </div>
+
+    <div class="form-group">
+        <label>Descripción:</label>
+        <textarea rows="2" class="form-control form-control-line" [(ngModel)]="ayuda.description"></textarea>
+    </div>
+
+
+    <div class="form-group row" *ngIf="!isEdit">
+        <label class="col-md-12">Puntos GPS:</label>
+
+        <div class="col-md-6 mt-1">
+            <input type="text" placeholder="Latitud" class="form-control form-control-line"
+                [(ngModel)]="ayuda.location.latitude">
+        </div>
+
+        <div class="col-md-6 mt-1">
+            <input type="text" placeholder="Longitud" class="form-control form-control-line"
+                [(ngModel)]="ayuda.location.longitude">
+        </div>
+    </div>
+</div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="bsModalRef.hide()"> Cancelar </button>
+    <button type="button" class="btn btn-primary" (click)="enviar()" *ngIf="!isEdit">
+        <i class="fa fa-paper-plane" *ngIf="isSaving!=true"></i>
+        <i class="fa fa-spinner fa-pulse" *ngIf="isSaving==true"></i> Solicitar </button>
+
+   <!--  <button type="button" class="btn btn-primary" (click)="updateAyuda()" *ngIf="isEdit">
+        <i class="fa fa-floppy-o" aria-hidden="true" *ngIf="isSaving!=true"></i>
+        <i class="fa fa-spinner fa-pulse" *ngIf="isSaving==true"></i> Actualizar </button> -->
+
+</div>
